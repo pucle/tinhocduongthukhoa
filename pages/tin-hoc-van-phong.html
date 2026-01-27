@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tin học văn phòng - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Tin học văn phòng - Tin Học Đường</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, #185ABD 0%, #107C41 50%, #C43E1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: #185ABD;
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .article-content ul {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-xl);
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(24, 90, 189, 0.1) 0%, rgba(16, 124, 65, 0.1) 100%);
+            border-left: 4px solid #185ABD;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: #185ABD;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #185ABD;
+        }
+
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+
+        .office-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="logo-text"><span class="logo-title">Tin Học Đường</span><span class="logo-subtitle">THPT
+                            Lý Tự Trọng</span></div>
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="../index.html" class="nav__link"><i
+                                class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                    <li class="nav__item"><a href="tin-hoc-van-phong.html" class="nav__link active"><i
+                                class="fas fa-file-word"></i><span>Văn phòng</span></a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm"><i class="fas fa-arrow-left"></i> Quay
+                        lại</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Tin học văn phòng</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fas fa-file-word"></i> Tin Học Văn Phòng</h1>
+
+            <p>Làm chủ bộ công cụ Microsoft Office để tăng năng suất học tập và làm việc.</p>
+
+            <div class="topic-grid">
+                <div class="topic-card" style="text-align: center;">
+                    <div class="office-icon" style="color: #185ABD;"><i class="fas fa-file-word"></i></div>
+                    <h3 style="justify-content: center;">Microsoft Word</h3>
+                    <p>Soạn thảo văn bản chuyên nghiệp</p>
+                </div>
+
+                <div class="topic-card" style="text-align: center;">
+                    <div class="office-icon" style="color: #107C41;"><i class="fas fa-file-excel"></i></div>
+                    <h3 style="justify-content: center;">Microsoft Excel</h3>
+                    <p>Xử lý bảng tính và dữ liệu</p>
+                </div>
+
+                <div class="topic-card" style="text-align: center;">
+                    <div class="office-icon" style="color: #C43E1C;"><i class="fas fa-file-powerpoint"></i></div>
+                    <h3 style="justify-content: center;">PowerPoint</h3>
+                    <p>Thiết kế bài thuyết trình</p>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-file-word" style="color:#185ABD"></i> Microsoft Word</h2>
+
+            <h3>Kỹ năng cơ bản</h3>
+            <ul>
+                <li>Định dạng văn bản: font, size, color, bold, italic</li>
+                <li>Căn lề, giãn dòng, khoảng cách đoạn</li>
+                <li>Tạo danh sách đánh số và bullet</li>
+                <li>Chèn hình ảnh, bảng biểu</li>
+                <li>Header, Footer và đánh số trang</li>
+            </ul>
+
+            <h3>Kỹ năng nâng cao</h3>
+            <ul>
+                <li>Tạo mục lục tự động (Table of Contents)</li>
+                <li>Mail Merge - Trộn thư</li>
+                <li>Track Changes - Theo dõi thay đổi</li>
+                <li>Styles và Themes</li>
+            </ul>
+
+            <div class="info-box">
+                <h4><i class="fas fa-keyboard"></i> Phím tắt Word thường dùng</h4>
+                <ul style="margin:0; padding-left: 1.5rem;">
+                    <li><strong>Ctrl + S</strong> - Lưu file</li>
+                    <li><strong>Ctrl + B</strong> - In đậm</li>
+                    <li><strong>Ctrl + I</strong> - In nghiêng</li>
+                    <li><strong>Ctrl + U</strong> - Gạch chân</li>
+                    <li><strong>Ctrl + Z</strong> - Hoàn tác</li>
+                </ul>
+            </div>
+
+            <h2><i class="fas fa-file-excel" style="color:#107C41"></i> Microsoft Excel</h2>
+
+            <h3>Công thức cơ bản</h3>
+            <ul>
+                <li><strong>=SUM(A1:A10)</strong> - Tính tổng</li>
+                <li><strong>=AVERAGE(A1:A10)</strong> - Tính trung bình</li>
+                <li><strong>=MAX(A1:A10)</strong> - Giá trị lớn nhất</li>
+                <li><strong>=MIN(A1:A10)</strong> - Giá trị nhỏ nhất</li>
+                <li><strong>=COUNT(A1:A10)</strong> - Đếm số ô có dữ liệu</li>
+                <li><strong>=IF(A1>5, "Đạt", "Không đạt")</strong> - Điều kiện</li>
+            </ul>
+
+            <h3>Công thức nâng cao</h3>
+            <ul>
+                <li><strong>VLOOKUP</strong> - Tìm kiếm theo cột</li>
+                <li><strong>HLOOKUP</strong> - Tìm kiếm theo hàng</li>
+                <li><strong>INDEX + MATCH</strong> - Tìm kiếm nâng cao</li>
+                <li><strong>SUMIF, COUNTIF</strong> - Tổng/Đếm có điều kiện</li>
+                <li><strong>Pivot Table</strong> - Bảng tổng hợp dữ liệu</li>
+            </ul>
+
+            <h2><i class="fas fa-file-powerpoint" style="color:#C43E1C"></i> PowerPoint</h2>
+
+            <h3>Nguyên tắc thiết kế slide</h3>
+            <ul>
+                <li><strong>Nguyên tắc 6x6:</strong> Mỗi slide tối đa 6 dòng, mỗi dòng tối đa 6 từ</li>
+                <li><strong>Contrast:</strong> Sử dụng màu tương phản để dễ đọc</li>
+                <li><strong>Alignment:</strong> Căn chỉnh thống nhất</li>
+                <li><strong>Repetition:</strong> Lặp lại style để tạo sự nhất quán</li>
+                <li><strong>Proximity:</strong> Nhóm các thông tin liên quan lại gần nhau</li>
+            </ul>
+
+            <h2><i class="fas fa-tasks"></i> Bài Tập Thực Hành</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-file-word" style="color:#185ABD"></i> Word</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Soạn đơn xin nghỉ học</li>
+                        <li>Viết báo cáo tổng kết</li>
+                        <li>Tạo CV xin việc</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-file-excel" style="color:#107C41"></i> Excel</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Bảng điểm lớp học</li>
+                        <li>Quản lý thu chi</li>
+                        <li>Biểu đồ thống kê</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-file-powerpoint" style="color:#C43E1C"></i> PowerPoint</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Thuyết trình môn học</li>
+                        <li>Giới thiệu bản thân</li>
+                        <li>Pitch dự án</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        const header = document.getElementById('header');
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header--scrolled', window.pageYOffset > 80);
+            backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>

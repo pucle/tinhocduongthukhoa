@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thi HSG Tin học - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Thi HSG Tin học - Tin Học Đường</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: #d4af37;
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-xl);
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
+            border-left: 4px solid #d4af37;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #d4af37;
+        }
+
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+
+        .medal {
+            font-size: 2rem;
+        }
+
+        .timeline {
+            border-left: 3px solid #d4af37;
+            padding-left: var(--space-xl);
+            margin: var(--space-xl) 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1 * var(--space-xl) - 8px);
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #d4af37;
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            margin: 0 0 var(--space-sm);
+            color: #d4af37;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="logo-text"><span class="logo-title">Tin Học Đường</span><span class="logo-subtitle">THPT
+                            Lý Tự Trọng</span></div>
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="../index.html" class="nav__link"><i
+                                class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                    <li class="nav__item"><a href="thuat-toan.html" class="nav__link"><i
+                                class="fas fa-project-diagram"></i><span>Thuật toán</span></a></li>
+                    <li class="nav__item"><a href="thi-hsg.html" class="nav__link active"><i
+                                class="fas fa-medal"></i><span>Thi HSG</span></a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm"><i class="fas fa-arrow-left"></i> Quay
+                        lại</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Thi HSG Tin học</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fas fa-medal"></i> Thi HSG Tin Học</h1>
+
+            <p>Tài liệu và lộ trình ôn thi Học sinh giỏi Tin học các cấp.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-trophy"></i> Các kỳ thi HSG Tin học</h4>
+                <ul style="margin:0; padding-left: 1.5rem;">
+                    <li><strong>Cấp trường:</strong> Vòng loại đầu tiên</li>
+                    <li><strong>Cấp quận/huyện:</strong> Thi chọn đội tuyển thành phố</li>
+                    <li><strong>Cấp tỉnh/thành phố:</strong> Thi chọn đội tuyển quốc gia</li>
+                    <li><strong>Cấp quốc gia:</strong> Vòng chung kết toàn quốc</li>
+                    <li><strong>Quốc tế (IOI):</strong> Olympic Tin học Quốc tế</li>
+                </ul>
+            </div>
+
+            <h2><i class="fas fa-road"></i> Lộ Trình Ôn Thi</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Giai đoạn 1: Nền tảng (2-3 tháng)</h4>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Cú pháp C++/Pascal</li>
+                        <li>Các thuật toán sắp xếp, tìm kiếm</li>
+                        <li>Độ phức tạp thuật toán</li>
+                        <li>Giải 50-100 bài cơ bản</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Giai đoạn 2: Nâng cao (3-4 tháng)</h4>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Quy hoạch động</li>
+                        <li>Lý thuyết đồ thị</li>
+                        <li>Cấu trúc dữ liệu nâng cao</li>
+                        <li>Giải 100-200 bài trung bình</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Giai đoạn 3: Chuyên sâu (2-3 tháng)</h4>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Segment Tree, BIT</li>
+                        <li>Heavy-Light Decomposition</li>
+                        <li>Suffix Array, LCP</li>
+                        <li>Giải đề thi các năm trước</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-book"></i> Tài Liệu Học Tập</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-globe" style="color:#d4af37"></i> Trang Web</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li><a href="https://oj.vnoi.info/" target="_blank">VNOJ</a></li>
+                        <li><a href="https://wiki.vnoi.info/" target="_blank">VNOI Wiki</a></li>
+                        <li><a href="https://codeforces.com/" target="_blank">Codeforces</a></li>
+                        <li><a href="https://atcoder.jp/" target="_blank">AtCoder</a></li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-book" style="color:#d4af37"></i> Sách</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Competitive Programming 3</li>
+                        <li>Introduction to Algorithms (CLRS)</li>
+                        <li>Giải thuật và Lập trình</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-file-alt" style="color:#d4af37"></i> Đề Thi</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li><a href="https://drive.google.com/drive/folders/1v7II21UysbEilhm5NDMcZ8hfnEKnvbeo"
+                                target="_blank">Thư viện đề thi VNOI</a></li>
+                        <li>Đề thi HSG Quốc gia</li>
+                        <li>Đề thi IOI các năm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-lightbulb"></i> Kinh Nghiệm Thi</h2>
+
+            <div class="info-box">
+                <h4><i class="fas fa-star"></i> Mẹo trong phòng thi</h4>
+                <ol style="margin:0; padding-left: 1.5rem;">
+                    <li><strong>Đọc hết đề:</strong> Đọc qua tất cả các bài trước khi bắt đầu làm</li>
+                    <li><strong>Ưu tiên bài dễ:</strong> Làm bài điểm cao, độ khó thấp trước</li>
+                    <li><strong>Quản lý thời gian:</strong> Dành thời gian hợp lý cho mỗi bài</li>
+                    <li><strong>Test kỹ:</strong> Luôn test với các test biên và test ngẫu nhiên</li>
+                    <li><strong>Partial points:</strong> Lấy điểm từng phần nếu không giải được trọn bài</li>
+                </ol>
+            </div>
+        </article>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        const header = document.getElementById('header');
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header--scrolled', window.pageYOffset > 80);
+            backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Học Python - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Python - Tin Học Đường</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, #3776AB 0%, #FFD43B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: #3776AB;
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-xl);
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .code-block {
+            background: #1e293b;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #e2e8f0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(55, 118, 171, 0.1) 0%, rgba(255, 212, 59, 0.1) 100%);
+            border-left: 4px solid #3776AB;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .info-box h4 {
+            color: #3776AB;
+            margin-bottom: var(--space-sm);
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: #3776AB;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: #3776AB;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #3776AB;
+        }
+
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="logo-text">
+                        <span class="logo-title">Tin Học Đường</span>
+                        <span class="logo-subtitle">THPT Lý Tự Trọng</span>
+                    </div>
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="../index.html" class="nav__link"><i
+                                class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                    <li class="nav__item"><a href="lap-trinh-can-ban.html" class="nav__link"><i
+                                class="fas fa-code"></i><span>Lập trình</span></a></li>
+                    <li class="nav__item"><a href="thuat-toan.html" class="nav__link"><i
+                                class="fas fa-project-diagram"></i><span>Thuật toán</span></a></li>
+                    <li class="nav__item"><a href="python.html" class="nav__link active"><i
+                                class="fab fa-python"></i><span>Python</span></a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm"><i class="fas fa-arrow-left"></i> Quay
+                        lại</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Python</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fab fa-python"></i> Học Python</h1>
+
+            <p>Python là ngôn ngữ lập trình phổ biến nhất thế giới, dễ học và có ứng dụng rộng rãi từ web, data science
+                đến AI.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-rocket"></i> Tại sao nên học Python?</h4>
+                <ul style="margin:0; padding-left: 1.5rem;">
+                    <li>Cú pháp đơn giản, dễ đọc</li>
+                    <li>Thư viện phong phú</li>
+                    <li>Cộng đồng lớn, nhiều tài liệu</li>
+                    <li>Ứng dụng đa dạng: Web, AI, Data Science, Automation</li>
+                </ul>
+            </div>
+
+            <h2><i class="fas fa-play"></i> Bắt Đầu Với Python</h2>
+
+            <h3>Hello World</h3>
+            <div class="code-block">
+                <code><span style="color:#5c6370"># Chương trình Python đầu tiên</span>
+<span style="color:#61afef">print</span>(<span style="color:#98c379">"Hello, World!"</span>)
+<span style="color:#61afef">print</span>(<span style="color:#98c379">"Xin chào Tin Học Đường!"</span>)</code>
+            </div>
+
+            <h3>Biến và Kiểu dữ liệu</h3>
+            <div class="code-block">
+                <code><span style="color:#5c6370"># Các kiểu dữ liệu cơ bản</span>
+name = <span style="color:#98c379">"Nguyễn Văn A"</span>     <span style="color:#5c6370"># String</span>
+age = <span style="color:#d19a66">16</span>                    <span style="color:#5c6370"># Integer</span>
+gpa = <span style="color:#d19a66">8.5</span>                   <span style="color:#5c6370"># Float</span>
+is_student = <span style="color:#d19a66">True</span>           <span style="color:#5c6370"># Boolean</span>
+
+<span style="color:#5c6370"># In thông tin</span>
+<span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Họ tên: {name}"</span>)
+<span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Tuổi: {age}"</span>)
+<span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Điểm TB: {gpa}"</span>)</code>
+            </div>
+
+            <h2><i class="fas fa-code-branch"></i> Cấu Trúc Điều Khiển</h2>
+
+            <h3>If-Else</h3>
+            <div class="code-block">
+                <code>diem = <span style="color:#d19a66">8.5</span>
+
+<span style="color:#c678dd">if</span> diem >= <span style="color:#d19a66">8.5</span>:
+    <span style="color:#61afef">print</span>(<span style="color:#98c379">"Giỏi"</span>)
+<span style="color:#c678dd">elif</span> diem >= <span style="color:#d19a66">6.5</span>:
+    <span style="color:#61afef">print</span>(<span style="color:#98c379">"Khá"</span>)
+<span style="color:#c678dd">elif</span> diem >= <span style="color:#d19a66">5.0</span>:
+    <span style="color:#61afef">print</span>(<span style="color:#98c379">"Trung bình"</span>)
+<span style="color:#c678dd">else</span>:
+    <span style="color:#61afef">print</span>(<span style="color:#98c379">"Yếu"</span>)</code>
+            </div>
+
+            <h3>Vòng lặp For</h3>
+            <div class="code-block">
+                <code><span style="color:#5c6370"># In các số từ 1 đến 10</span>
+<span style="color:#c678dd">for</span> i <span style="color:#c678dd">in</span> <span style="color:#61afef">range</span>(<span style="color:#d19a66">1</span>, <span style="color:#d19a66">11</span>):
+    <span style="color:#61afef">print</span>(i)
+
+<span style="color:#5c6370"># Duyệt danh sách</span>
+subjects = [<span style="color:#98c379">"Toán"</span>, <span style="color:#98c379">"Lý"</span>, <span style="color:#98c379">"Hóa"</span>, <span style="color:#98c379">"Tin"</span>]
+<span style="color:#c678dd">for</span> subject <span style="color:#c678dd">in</span> subjects:
+    <span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Môn: {subject}"</span>)</code>
+            </div>
+
+            <h2><i class="fas fa-cube"></i> Hàm (Function)</h2>
+
+            <div class="code-block">
+                <code><span style="color:#5c6370"># Định nghĩa hàm</span>
+<span style="color:#c678dd">def</span> <span style="color:#61afef">tinh_tong</span>(a, b):
+    <span style="color:#98c379">"""Tính tổng 2 số"""</span>
+    <span style="color:#c678dd">return</span> a + b
+
+<span style="color:#c678dd">def</span> <span style="color:#61afef">xep_loai</span>(diem):
+    <span style="color:#98c379">"""Xếp loại học sinh"""</span>
+    <span style="color:#c678dd">if</span> diem >= <span style="color:#d19a66">8.5</span>: <span style="color:#c678dd">return</span> <span style="color:#98c379">"Giỏi"</span>
+    <span style="color:#c678dd">if</span> diem >= <span style="color:#d19a66">6.5</span>: <span style="color:#c678dd">return</span> <span style="color:#98c379">"Khá"</span>
+    <span style="color:#c678dd">if</span> diem >= <span style="color:#d19a66">5.0</span>: <span style="color:#c678dd">return</span> <span style="color:#98c379">"TB"</span>
+    <span style="color:#c678dd">return</span> <span style="color:#98c379">"Yếu"</span>
+
+<span style="color:#5c6370"># Sử dụng hàm</span>
+<span style="color:#61afef">print</span>(<span style="color:#61afef">tinh_tong</span>(<span style="color:#d19a66">5</span>, <span style="color:#d19a66">3</span>))  <span style="color:#5c6370"># Output: 8</span>
+<span style="color:#61afef">print</span>(<span style="color:#61afef">xep_loai</span>(<span style="color:#d19a66">8.7</span>))   <span style="color:#5c6370"># Output: Giỏi</span></code>
+            </div>
+
+            <h2><i class="fas fa-list"></i> List và Dictionary</h2>
+
+            <div class="code-block">
+                <code><span style="color:#5c6370"># List - Danh sách</span>
+scores = [<span style="color:#d19a66">8.5</span>, <span style="color:#d19a66">9.0</span>, <span style="color:#d19a66">7.5</span>, <span style="color:#d19a66">8.0</span>]
+<span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Điểm TB: {<span style="color:#61afef">sum</span>(scores)/<span style="color:#61afef">len</span>(scores)}"</span>)
+
+<span style="color:#5c6370"># Dictionary - Từ điển</span>
+student = {
+    <span style="color:#98c379">"name"</span>: <span style="color:#98c379">"Nguyễn Văn A"</span>,
+    <span style="color:#98c379">"class"</span>: <span style="color:#98c379">"11A1"</span>,
+    <span style="color:#98c379">"gpa"</span>: <span style="color:#d19a66">8.5</span>
+}
+<span style="color:#61afef">print</span>(<span style="color:#c678dd">f</span><span style="color:#98c379">"Học sinh: {student['name']}"</span>)</code>
+            </div>
+
+            <h2><i class="fas fa-tasks"></i> Bài Tập Thực Hành</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--success)"></i> Dễ</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Tính tổng các số từ 1-N</li>
+                        <li>Kiểm tra số chẵn/lẻ</li>
+                        <li>In bảng cửu chương</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--accent)"></i> Trung bình</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Kiểm tra số nguyên tố</li>
+                        <li>Tính giai thừa</li>
+                        <li>Đảo ngược chuỗi</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--danger)"></i> Khó</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Giải phương trình bậc 2</li>
+                        <li>Sắp xếp danh sách</li>
+                        <li>Đọc/ghi file</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: var(--space-2xl)">
+                <h4><i class="fas fa-external-link-alt"></i> Tài liệu tham khảo</h4>
+                <ul style="margin:0; padding-left: 1.5rem;">
+                    <li><a href="https://docs.python.org/3/" target="_blank">Python Official Documentation</a></li>
+                    <li><a href="https://wiki.vnoi.info/" target="_blank">VNOI Wiki</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        const header = document.getElementById('header');
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 80) header.classList.add('header--scrolled');
+            else header.classList.remove('header--scrolled');
+            if (window.pageYOffset > 300) backToTopBtn.classList.add('show');
+            else backToTopBtn.classList.remove('show');
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>

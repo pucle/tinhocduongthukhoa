@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tin Học Đường - THPT Lý Tự Trọng - Nơi khơi nguồn đam mê công nghệ và sáng tạo số">
+    <meta name="keywords" content="tin học, lập trình, học sinh, THPT, coding, algorithm">
+    <title>Tin Học Đường - THPT Lý Tự Trọng</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">Tin Học Đường</span>
+                        <span class="logo-subtitle">THPT Lý Tự Trọng</span>
+                    </div>
+                </div>
+
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active">
+                            <i class="fas fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="pages/thi-hsg.html" class="nav__link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Tin tức</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="pages/lap-trinh-can-ban.html" class="nav__link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Khóa học</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="pages/thuat-toan.html" class="nav__link">
+                            <i class="fas fa-code"></i>
+                            <span>Bài tập</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="pages/thi-hsg.html" class="nav__link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Contest</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="pages/thuat-toan.html" class="nav__link">
+                            <i class="fas fa-book"></i>
+                            <span>Wiki</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://discord.gg/TDyYVyd" target="_blank" class="nav__link">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav__actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Tìm kiếm...">
+                    </div>
+                    <a href="https://oj.vnoi.info/accounts/login/" target="_blank" class="btn btn--outline btn--sm">Đăng
+                        nhập</a>
+                    <a href="https://oj.vnoi.info/accounts/register/" target="_blank"
+                        class="btn btn--primary btn--sm">Đăng ký</a>
+                    <button class="nav__toggle" id="navToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTAINER ===== -->
+    <div class="container main-container">
+        <div class="layout-grid">
+
+            <!-- ===== LEFT SIDEBAR ===== -->
+            <aside class="sidebar sidebar--left">
+                <!-- Danh mục chủ đề -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-folder-open"></i>
+                        Danh mục chủ đề
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <a href="pages/tin-hoc-van-phong.html">
+                                <i class="fas fa-file-word"></i>
+                                <span>Tin học văn phòng</span>
+                                <span class="count">24</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/lap-trinh-can-ban.html">
+                                <i class="fas fa-code"></i>
+                                <span>Lập trình căn bản</span>
+                                <span class="count">156</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/python.html">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <span class="count">89</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/thiet-ke-web.html">
+                                <i class="fas fa-palette"></i>
+                                <span>Thiết kế web</span>
+                                <span class="count">67</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/thiet-ke-web.html">
+                                <i class="fas fa-image"></i>
+                                <span>Đồ họa & Media</span>
+                                <span class="count">43</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/thi-hsg.html">
+                                <i class="fas fa-medal"></i>
+                                <span>Thi HSG Tin học</span>
+                                <span class="count">112</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a href="pages/thuat-toan.html">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Thuật toán & CTDL</span>
+                                <span class="count">203</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Lịch sự kiện -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-calendar-alt"></i>
+                        Lịch sự kiện
+                    </h3>
+                    <div class="event-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Th2</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Olympic Tin học TP.HCM</h4>
+                                <p><i class="fas fa-clock"></i> 8:00 - 12:00</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">Th2</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Workshop Python AI</h4>
+                                <p><i class="fas fa-clock"></i> 14:00 - 16:30</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">03</span>
+                                <span class="month">Th3</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Hackathon 2026</h4>
+                                <p><i class="fas fa-clock"></i> Cả ngày</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thống kê -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-chart-bar"></i>
+                        Thống kê
+                    </h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-info">
+                                <span class="stat-number">1,234</span>
+                                <span class="stat-label">Thành viên</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-eye"></i>
+                            <div class="stat-info">
+                                <span class="stat-number">45.6K</span>
+                                <span class="stat-label">Lượt xem</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-pen"></i>
+                            <div class="stat-info">
+                                <span class="stat-number">567</span>
+                                <span class="stat-label">Bài viết</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="stat-info">
+                                <span class="stat-number">8.9K</span>
+                                <span class="stat-label">Bài giải</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liên kết nhanh -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-link"></i>
+                        Liên kết nhanh
+                    </h3>
+                    <ul class="quick-links">
+                        <li><a href="pages/lap-trinh-can-ban.html"><i class="fas fa-book-open"></i> Tài liệu học tập</a>
+                        </li>
+                        <li><a href="pages/thi-hsg.html"><i class="fas fa-file-pdf"></i> Đề thi HSG</a></li>
+                        <li><a href="pages/thuat-toan.html"><i class="fas fa-code-branch"></i> Thư viện code</a></li>
+                        <li><a href="pages/thi-hsg.html"><i class="fab fa-discord"></i> Diễn đàn chia sẻ</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <main class="main-content">
+                <!-- Hero Banner -->
+                <section class="hero">
+                    <div class="hero__content">
+                        <div class="hero__text">
+                            <h1 class="hero__title">
+                                Chào mừng đến với
+                                <span class="gradient-text">Tin Học Đường</span>
+                            </h1>
+                            <p class="hero__subtitle">
+                                Nơi khơi nguồn đam mê công nghệ và sáng tạo số
+                            </p>
+                            <button class="btn btn--primary btn--lg">
+                                <span>Khám phá ngay</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="hero__decoration">
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <pre><code><span class="keyword">function</span> <span class="function">helloWorld</span>() {
+  <span class="keyword">const</span> message = <span class="string">"Passion for Code"</span>;
+  console.<span class="function">log</span>(message);
+  <span class="keyword">return</span> <span class="number">true</span>;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tin tức nổi bật -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-fire"></i>
+                            Tin tức nổi bật
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="news-grid">
+                        <!-- Featured News (Large) -->
+                        <article class="news-card news-card--featured">
+                            <div class="news-card__image">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800"
+                                    alt="Olympic Tin học">
+                                <span class="badge badge--gold">Nổi bật</span>
+                            </div>
+                            <div class="news-card__content">
+                                <div class="news-card__meta">
+                                    <span class="category">Thành tích</span>
+                                    <span class="date"><i class="fas fa-clock"></i> 2 giờ trước</span>
+                                </div>
+                                <h3 class="news-card__title">
+                                    Học sinh trường đạt Huy chương Vàng Olympic Tin học Quốc tế 2026
+                                </h3>
+                                <p class="news-card__excerpt">
+                                    Em Nguyễn Minh Khoa, lớp 12A1, đã xuất sắc giành Huy chương Vàng tại kỳ thi Olympic
+                                    Tin học Quốc tế IOI 2026, mang về vinh quang cho nhà trường...
+                                </p>
+                                <a href="#" class="btn btn--text">
+                                    Đọc thêm <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Small News Cards -->
+                        <article class="news-card">
+                            <div class="news-card__image">
+                                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400"
+                                    alt="Python">
+                                <span class="badge badge--primary">Khóa học</span>
+                            </div>
+                            <div class="news-card__content">
+                                <div class="news-card__meta">
+                                    <span class="date"><i class="fas fa-clock"></i> 1 ngày trước</span>
+                                </div>
+                                <h3 class="news-card__title">
+                                    Khai giảng khóa học Python cho người mới bắt đầu
+                                </h3>
+                                <a href="#" class="btn btn--text btn--sm">
+                                    Đọc thêm <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-card__image">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400"
+                                    alt="Hackathon">
+                                <span class="badge badge--accent">Sự kiện</span>
+                            </div>
+                            <div class="news-card__content">
+                                <div class="news-card__meta">
+                                    <span class="date"><i class="fas fa-clock"></i> 3 ngày trước</span>
+                                </div>
+                                <h3 class="news-card__title">
+                                    Hackathon 2026 - Cuộc thi lập trình sáng tạo
+                                </h3>
+                                <a href="#" class="btn btn--text btn--sm">
+                                    Đọc thêm <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-card__image">
+                                <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=400" alt="App">
+                                <span class="badge badge--success">Dự án</span>
+                            </div>
+                            <div class="news-card__content">
+                                <div class="news-card__meta">
+                                    <span class="date"><i class="fas fa-clock"></i> 5 ngày trước</span>
+                                </div>
+                                <h3 class="news-card__title">
+                                    Học sinh tạo ứng dụng quản lý thư viện thông minh
+                                </h3>
+                                <a href="#" class="btn btn--text btn--sm">
+                                    Đọc thêm <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Bài tập lập trình HOT -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-code"></i>
+                            Bài tập lập trình HOT
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="problem-table-wrapper">
+                        <table class="problem-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên bài tập</th>
+                                    <th>Độ khó</th>
+                                    <th>Đã giải</th>
+                                    <th>Độ chính xác</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="problem-id">#001</span></td>
+                                    <td>
+                                        <div class="problem-title">
+                                            <strong>A cộng B</strong>
+                                            <div class="problem-tags">
+                                                <span class="tag">math</span>
+                                                <span class="tag">basic</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="difficulty difficulty--easy">Easy</span></td>
+                                    <td><span class="solved-count">1,234</span></td>
+                                    <td>
+                                        <div class="accuracy">
+                                            <div class="accuracy-bar">
+                                                <div class="accuracy-fill" style="width: 98%"></div>
+                                            </div>
+                                            <span>98%</span>
+                                        </div>
+                                    </td>
+                                    <td><a href="https://oj.vnoi.info/problems/" target="_blank"
+                                            class="btn btn--sm btn--outline">Giải ngay</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="problem-id">#042</span></td>
+                                    <td>
+                                        <div class="problem-title">
+                                            <strong>Tìm kiếm nhị phân</strong>
+                                            <div class="problem-tags">
+                                                <span class="tag">binary-search</span>
+                                                <span class="tag">array</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="difficulty difficulty--medium">Medium</span></td>
+                                    <td><span class="solved-count">567</span></td>
+                                    <td>
+                                        <div class="accuracy">
+                                            <div class="accuracy-bar">
+                                                <div class="accuracy-fill" style="width: 65%"></div>
+                                            </div>
+                                            <span>65%</span>
+                                        </div>
+                                    </td>
+                                    <td><a href="https://oj.vnoi.info/problems/" target="_blank"
+                                            class="btn btn--sm btn--outline">Giải ngay</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="problem-id">#127</span></td>
+                                    <td>
+                                        <div class="problem-title">
+                                            <strong>Cây khung nhỏ nhất</strong>
+                                            <div class="problem-tags">
+                                                <span class="tag">graph</span>
+                                                <span class="tag">mst</span>
+                                                <span class="tag">greedy</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="difficulty difficulty--hard">Hard</span></td>
+                                    <td><span class="solved-count">123</span></td>
+                                    <td>
+                                        <div class="accuracy">
+                                            <div class="accuracy-bar">
+                                                <div class="accuracy-fill" style="width: 32%"></div>
+                                            </div>
+                                            <span>32%</span>
+                                        </div>
+                                    </td>
+                                    <td><a href="https://oj.vnoi.info/problems/" target="_blank"
+                                            class="btn btn--sm btn--outline">Giải ngay</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="problem-id">#089</span></td>
+                                    <td>
+                                        <div class="problem-title">
+                                            <strong>Quy hoạch động - Dãy con tăng dài nhất</strong>
+                                            <div class="problem-tags">
+                                                <span class="tag">dp</span>
+                                                <span class="tag">sequence</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="difficulty difficulty--medium">Medium</span></td>
+                                    <td><span class="solved-count">445</span></td>
+                                    <td>
+                                        <div class="accuracy">
+                                            <div class="accuracy-bar">
+                                                <div class="accuracy-fill" style="width: 58%"></div>
+                                            </div>
+                                            <span>58%</span>
+                                        </div>
+                                    </td>
+                                    <td><a href="https://oj.vnoi.info/problems/" target="_blank"
+                                            class="btn btn--sm btn--outline">Giải ngay</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="problem-id">#015</span></td>
+                                    <td>
+                                        <div class="problem-title">
+                                            <strong>Sắp xếp nổi bọt</strong>
+                                            <div class="problem-tags">
+                                                <span class="tag">sorting</span>
+                                                <span class="tag">basic</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="difficulty difficulty--easy">Easy</span></td>
+                                    <td><span class="solved-count">892</span></td>
+                                    <td>
+                                        <div class="accuracy">
+                                            <div class="accuracy-bar">
+                                                <div class="accuracy-fill" style="width: 85%"></div>
+                                            </div>
+                                            <span>85%</span>
+                                        </div>
+                                    </td>
+                                    <td><a href="https://oj.vnoi.info/problems/" target="_blank"
+                                            class="btn btn--sm btn--outline">Giải ngay</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Contest đang diễn ra -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-trophy"></i>
+                            Contest đang diễn ra
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="contest-grid">
+                        <div class="contest-card contest-card--ongoing">
+                            <div class="contest-card__status">
+                                <span class="status-badge status-badge--live">
+                                    <i class="fas fa-circle"></i> Đang diễn ra
+                                </span>
+                            </div>
+                            <h3 class="contest-card__title">Weekly Challenge #23</h3>
+                            <p class="contest-card__desc">Thử thách thuật toán hàng tuần - Chủ đề: Dynamic Programming
+                            </p>
+                            <div class="contest-card__info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Kết thúc: 28/01/2026 23:59</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>234 người tham gia</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--block">Tham gia ngay</button>
+                        </div>
+
+                        <div class="contest-card">
+                            <div class="contest-card__status">
+                                <span class="status-badge status-badge--upcoming">
+                                    <i class="fas fa-clock"></i> Sắp diễn ra
+                                </span>
+                            </div>
+                            <h3 class="contest-card__title">Olympic Tin học Nội bộ 2026</h3>
+                            <p class="contest-card__desc">Vòng loại Olympic Tin học cấp trường - 5 bài toán trong 3 giờ
+                            </p>
+                            <div class="contest-card__info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Bắt đầu: 05/02/2026 08:00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>89 người đăng ký</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--outline btn--block">Đăng ký tham gia</button>
+                        </div>
+
+                        <div class="contest-card">
+                            <div class="contest-card__status">
+                                <span class="status-badge status-badge--upcoming">
+                                    <i class="fas fa-clock"></i> Sắp diễn ra
+                                </span>
+                            </div>
+                            <h3 class="contest-card__title">Hackathon 2026: Code for Future</h3>
+                            <p class="contest-card__desc">Cuộc thi lập trình sáng tạo 24 giờ - Xây dựng giải pháp cho
+                                cộng đồng</p>
+                            <div class="contest-card__info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Bắt đầu: 15/03/2026 08:00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>45 đội đăng ký</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--outline btn--block">Đăng ký tham gia</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Khóa học đề xuất -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Khóa học đề xuất
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-card__icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <h3 class="course-card__title">Lập trình Pascal</h3>
+                            <p class="course-card__desc">Từ cơ bản đến nâng cao - Dành cho học sinh thi HSG</p>
+                            <div class="course-card__stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>156 học viên</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--block">Tham gia khóa học</button>
+                        </div>
+
+                        <div class="course-card course-card--featured">
+                            <div class="featured-badge">
+                                <i class="fas fa-crown"></i> Nổi bật
+                            </div>
+                            <div class="course-card__icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h3 class="course-card__title">Python căn bản</h3>
+                            <p class="course-card__desc">Học Python từ con số 0 - Lập trình cho mọi người</p>
+                            <div class="course-card__stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>234 học viên</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--block">Tham gia khóa học</button>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__icon">
+                                <i class="fas fa-cat"></i>
+                            </div>
+                            <h3 class="course-card__title">Scratch cơ bản</h3>
+                            <p class="course-card__desc">Lập trình trực quan cho người mới bắt đầu</p>
+                            <div class="course-card__stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>89 học viên</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--block">Tham gia khóa học</button>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-card__icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h3 class="course-card__title">Tin học văn phòng</h3>
+                            <p class="course-card__desc">Word, Excel, PowerPoint - Kỹ năng thiết yếu</p>
+                            <div class="course-card__stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>312 học viên</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--block">Tham gia khóa học</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video hướng dẫn -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-play-circle"></i>
+                            Video hướng dẫn
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="video-grid">
+                        <a href="https://www.youtube.com/watch?v=HtSuA80QTyo" target="_blank" class="video-card">
+                            <div class="video-card__thumbnail">
+                                <img src="https://img.youtube.com/vi/HtSuA80QTyo/maxresdefault.jpg"
+                                    alt="Python Tutorial">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <span class="duration-badge">2:45:24</span>
+                            </div>
+                            <div class="video-card__content">
+                                <h4>Python Full Course - Learn Python in 2 Hours</h4>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 12M+ lượt xem</span>
+                                    <span><i class="fas fa-user"></i> Programming with Mosh</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=8hly31xKli0" target="_blank" class="video-card">
+                            <div class="video-card__thumbnail">
+                                <img src="https://img.youtube.com/vi/8hly31xKli0/maxresdefault.jpg" alt="Algorithm">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <span class="duration-badge">5:22:09</span>
+                            </div>
+                            <div class="video-card__content">
+                                <h4>Data Structures and Algorithms Full Course</h4>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 5M+ lượt xem</span>
+                                    <span><i class="fas fa-user"></i> freeCodeCamp</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=pTB0EiLXUC8" target="_blank" class="video-card">
+                            <div class="video-card__thumbnail">
+                                <img src="https://img.youtube.com/vi/pTB0EiLXUC8/maxresdefault.jpg" alt="Web Dev">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <span class="duration-badge">2:04:12</span>
+                            </div>
+                            <div class="video-card__content">
+                                <h4>HTML & CSS Full Course - Beginner to Pro</h4>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 3M+ lượt xem</span>
+                                    <span><i class="fas fa-user"></i> SuperSimpleDev</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=zg9ih6SVACc" target="_blank" class="video-card">
+                            <div class="video-card__thumbnail">
+                                <img src="https://img.youtube.com/vi/zg9ih6SVACc/maxresdefault.jpg" alt="C++ Tutorial">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <span class="duration-badge">31:28:24</span>
+                            </div>
+                            <div class="video-card__content">
+                                <h4>C++ Full Course - Learn C++ in 30 Hours</h4>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 7M+ lượt xem</span>
+                                    <span><i class="fas fa-user"></i> freeCodeCamp</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Thành tích học sinh -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-medal"></i>
+                            Thành tích học sinh
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="achievement-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-medal">🥇</div>
+                            <h4 class="achievement-name">Nguyễn Minh Khoa</h4>
+                            <p class="achievement-award">HCV Olympic Tin học Quốc tế 2026</p>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-medal">🥈</div>
+                            <h4 class="achievement-name">Trần Anh Tuấn</h4>
+                            <p class="achievement-award">HCB Kỳ thi Tin học trẻ Quốc gia</p>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-medal">🥉</div>
+                            <h4 class="achievement-name">Lê Thị Mai</h4>
+                            <p class="achievement-award">HCĐ Cuộc thi Lập trình ICPC</p>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-medal">🏆</div>
+                            <h4 class="achievement-name">Team CodeWarriors</h4>
+                            <p class="achievement-award">Giải Nhất Hackathon TP.HCM</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bài viết mới nhất -->
+                <section class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">
+                            <i class="fas fa-newspaper"></i>
+                            Bài viết mới nhất
+                        </h2>
+                        <a href="#" class="section__link">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="post-list">
+                        <article class="post-item">
+                            <div class="post-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="post-content">
+                                <h4 class="post-title">10 mẹo học lập trình hiệu quả cho học sinh THPT</h4>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-user"></i> Thầy Minh</span>
+                                    <span><i class="fas fa-calendar"></i> 25/01/2026</span>
+                                    <span><i class="fas fa-eye"></i> 456 lượt xem</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-item">
+                            <div class="post-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="post-content">
+                                <h4 class="post-title">Tài liệu ôn thi HSG Tin học cấp Quốc gia 2026</h4>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-user"></i> Cô Hương</span>
+                                    <span><i class="fas fa-calendar"></i> 23/01/2026</span>
+                                    <span><i class="fas fa-eye"></i> 789 lượt xem</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-item">
+                            <div class="post-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="post-content">
+                                <h4 class="post-title">Giới thiệu Python 3.12 - Những tính năng mới đáng chú ý</h4>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-user"></i> Admin</span>
+                                    <span><i class="fas fa-calendar"></i> 20/01/2026</span>
+                                    <span><i class="fas fa-eye"></i> 623 lượt xem</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-item">
+                            <div class="post-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div class="post-content">
+                                <h4 class="post-title">Hướng dẫn sử dụng Git và GitHub cho người mới bắt đầu</h4>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-user"></i> Thầy Tuấn</span>
+                                    <span><i class="fas fa-calendar"></i> 18/01/2026</span>
+                                    <span><i class="fas fa-eye"></i> 891 lượt xem</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-item">
+                            <div class="post-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="post-content">
+                                <h4 class="post-title">Thuật toán Tham lam (Greedy) - Lý thuyết và bài tập</h4>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-user"></i> Cô Lan</span>
+                                    <span><i class="fas fa-calendar"></i> 15/01/2026</span>
+                                    <span><i class="fas fa-eye"></i> 1.1K lượt xem</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- ===== RIGHT SIDEBAR ===== -->
+            <aside class="sidebar sidebar--right">
+                <!-- User Profile Widget -->
+                <div class="widget user-profile">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="User">
+                            <span class="profile-status"></span>
+                        </div>
+                        <div class="profile-info">
+                            <h4>Nguyễn Văn A</h4>
+                            <p>@codernguyen</p>
+                        </div>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="profile-stat">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <strong>15</strong>
+                                <span>Streak</span>
+                            </div>
+                        </div>
+                        <div class="profile-stat">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>89</strong>
+                                <span>Bài giải</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-progress">
+                        <div class="progress-label">
+                            <span>Tiến độ học tập</span>
+                            <strong>68%</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông báo quan trọng -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-bell"></i>
+                        Thông báo quan trọng
+                    </h3>
+                    <div class="announcement-list">
+                        <div class="announcement-item announcement-item--urgent">
+                            <span class="urgent-badge">Khẩn</span>
+                            <p>Thay đổi lịch thi Olympic Tin học - Di chuyển từ 01/02 sang 05/02/2026</p>
+                            <span class="time"><i class="fas fa-clock"></i> 3 giờ trước</span>
+                        </div>
+                        <div class="announcement-item">
+                            <p>Mở đăng ký khóa học Python AI - Số lượng có hạn</p>
+                            <span class="time"><i class="fas fa-clock"></i> 1 ngày trước</span>
+                        </div>
+                        <div class="announcement-item">
+                            <p>Cập nhật hệ thống chấm bài tự động - Vui lòng đọc hướng dẫn mới</p>
+                            <span class="time"><i class="fas fa-clock"></i> 2 ngày trước</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sự kiện sắp tới -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-calendar-check"></i>
+                        Sự kiện sắp tới
+                    </h3>
+                    <div class="upcoming-events">
+                        <div class="event-card-mini">
+                            <div class="event-date-mini">
+                                <span class="day">28</span>
+                                <span class="month">Th1</span>
+                            </div>
+                            <div class="event-info-mini">
+                                <h5>Workshop AI với Python</h5>
+                                <p><i class="fas fa-map-marker-alt"></i> Phòng Lab 1</p>
+                                <p><i class="fas fa-clock"></i> 14:00 - 16:30</p>
+                            </div>
+                        </div>
+
+                        <div class="event-card-mini">
+                            <div class="event-date-mini">
+                                <span class="day">05</span>
+                                <span class="month">Th2</span>
+                            </div>
+                            <div class="event-info-mini">
+                                <h5>Olympic Tin học Nội bộ</h5>
+                                <p><i class="fas fa-map-marker-alt"></i> Trực tuyến</p>
+                                <p><i class="fas fa-clock"></i> 08:00 - 11:00</p>
+                            </div>
+                        </div>
+
+                        <div class="event-card-mini">
+                            <div class="event-date-mini">
+                                <span class="day">15</span>
+                                <span class="month">Th3</span>
+                            </div>
+                            <div class="event-info-mini">
+                                <h5>Hackathon 2026</h5>
+                                <p><i class="fas fa-map-marker-alt"></i> Hội trường A</p>
+                                <p><i class="fas fa-clock"></i> 08:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top bài viết -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-fire"></i>
+                        Top bài viết
+                    </h3>
+                    <div class="popular-posts">
+                        <div class="popular-post">
+                            <span class="rank rank--1">1</span>
+                            <div class="popular-post-info">
+                                <h5>Cách tối ưu code Pascal</h5>
+                                <span class="views"><i class="fas fa-eye"></i> 3.2K</span>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="rank rank--2">2</span>
+                            <div class="popular-post-info">
+                                <h5>Giải thuật Quy hoạch động</h5>
+                                <span class="views"><i class="fas fa-eye"></i> 2.8K</span>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="rank rank--3">3</span>
+                            <div class="popular-post-info">
+                                <h5>Python cho Data Science</h5>
+                                <span class="views"><i class="fas fa-eye"></i> 2.1K</span>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="rank">4</span>
+                            <div class="popular-post-info">
+                                <h5>Cấu trúc dữ liệu Tree</h5>
+                                <span class="views"><i class="fas fa-eye"></i> 1.9K</span>
+                            </div>
+                        </div>
+                        <div class="popular-post">
+                            <span class="rank">5</span>
+                            <div class="popular-post-info">
+                                <h5>Bí kíp thi HSG Tin học</h5>
+                                <span class="views"><i class="fas fa-eye"></i> 1.7K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Contributors -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-users"></i>
+                        Top Contributors
+                    </h3>
+                    <div class="contributors-list">
+                        <div class="contributor">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="User">
+                            <div class="contributor-info">
+                                <h5>Minh Khoa</h5>
+                                <span class="points">2,456 điểm</span>
+                            </div>
+                            <span class="contributor-rank">#1</span>
+                        </div>
+                        <div class="contributor">
+                            <img src="https://i.pravatar.cc/150?img=25" alt="User">
+                            <div class="contributor-info">
+                                <h5>Anh Tuấn</h5>
+                                <span class="points">1,892 điểm</span>
+                            </div>
+                            <span class="contributor-rank">#2</span>
+                        </div>
+                        <div class="contributor">
+                            <img src="https://i.pravatar.cc/150?img=31" alt="User">
+                            <div class="contributor-info">
+                                <h5>Thị Mai</h5>
+                                <span class="points">1,634 điểm</span>
+                            </div>
+                            <span class="contributor-rank">#3</span>
+                        </div>
+                        <div class="contributor">
+                            <img src="https://i.pravatar.cc/150?img=18" alt="User">
+                            <div class="contributor-info">
+                                <h5>Văn Long</h5>
+                                <span class="points">1,421 điểm</span>
+                            </div>
+                            <span class="contributor-rank">#4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tài liệu download -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-download"></i>
+                        Tài liệu download
+                    </h3>
+                    <div class="download-list">
+                        <a href="#" class="download-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="download-info">
+                                <h5>Đề thi HSG 2025</h5>
+                                <span>2.3 MB</span>
+                            </div>
+                        </a>
+                        <a href="#" class="download-item">
+                            <i class="fas fa-file-word"></i>
+                            <div class="download-info">
+                                <h5>Tài liệu Pascal</h5>
+                                <span>1.8 MB</span>
+                            </div>
+                        </a>
+                        <a href="#" class="download-item">
+                            <i class="fas fa-file-archive"></i>
+                            <div class="download-info">
+                                <h5>Code mẫu C++</h5>
+                                <span>456 KB</span>
+                            </div>
+                        </a>
+                        <a href="#" class="download-item">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <div class="download-info">
+                                <h5>Slide Thuật toán</h5>
+                                <span>3.1 MB</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="widget">
+                    <h3 class="widget__title">
+                        <i class="fas fa-share-alt"></i>
+                        Mạng xã hội
+                    </h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/groups/163aboratory/" target="_blank"
+                            class="social-btn social-btn--facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@faboratory" target="_blank"
+                            class="social-btn social-btn--youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/VNOI-Admin/OJ" target="_blank"
+                            class="social-btn social-btn--github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/TDyYVyd" target="_blank" class="social-btn social-btn--discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Về chúng tôi -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Về chúng tôi</h4>
+                    <p class="footer-desc">
+                        Tin Học Đường - Nơi khơi nguồn đam mê công nghệ và sáng tạo số cho học sinh THPT.
+                    </p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 36 Hoa Thanh Quế</p>
+                        <p><i class="fas fa-phone"></i> 036 1836 3618</p>
+                     
+                    </div>
+                </div>
+
+                <!-- Column 2: Danh mục -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Danh mục</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Khóa học</a></li>
+                        <li><a href="#">Bài tập lập trình</a></li>
+                        <li><a href="#">Contest</a></li>
+                        <li><a href="#">Wiki/Tài liệu</a></li>
+                        <li><a href="#">Thành tích</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hỗ trợ -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/lap-trinh-can-ban.html">Hướng dẫn sử dụng</a></li>
+                        <li><a href="pages/thi-hsg.html">FAQ câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hỗ trợ</a></li>
+                        <li><a href="#">Góp ý báo lỗi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Theo dõi chúng tôi</h4>
+                    <p>Đăng ký nhận thông tin mới nhất về các khóa học và sự kiện</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email của bạn" required>
+                        <button type="submit" class="btn btn--primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/groups/163aboratory/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@faboratory" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/VNOI-Admin/OJ" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/TDyYVyd" target="_blank"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tin Học Đường - THPT Lý Tự Trọng. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> by CodeWarriors Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== STICKY HEADER =====
+        const header = document.getElementById('header');
+        const headerHeight = header.offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > headerHeight) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+
+        // ===== BACK TO TOP BUTTON =====
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ===== SMOOTH SCROLLING =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== MOBILE MENU TOGGLE =====
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.querySelector('i').classList.toggle('fa-bars');
+            navToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // ===== SEARCH BOX FOCUS EFFECT =====
+        const searchBox = document.querySelector('.search-box input');
+        searchBox.addEventListener('focus', () => {
+            searchBox.parentElement.classList.add('focused');
+        });
+        searchBox.addEventListener('blur', () => {
+            searchBox.parentElement.classList.remove('focused');
+        });
+
+        // ===== ANIMATE ON SCROLL (Simple) =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe các phần tử cần animate
+        document.querySelectorAll('.news-card, .course-card, .contest-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

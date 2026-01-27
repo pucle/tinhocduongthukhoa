@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đồ họa & Media - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Đồ họa & Media - Tin Học Đường</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, #FF0099 0%, #493240 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: #FF0099;
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(255, 0, 153, 0.1) 0%, rgba(73, 50, 64, 0.1) 100%);
+            border-left: 4px solid #FF0099;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: #FF0099;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #FF0099;
+        }
+
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="logo-text"><span class="logo-title">Tin Học Đường</span><span class="logo-subtitle">THPT
+                            Lý Tự Trọng</span></div>
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="../index.html" class="nav__link"><i
+                                class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                    <li class="nav__item"><a href="thiet-ke-web.html" class="nav__link"><i
+                                class="fas fa-palette"></i><span>Thiết kế Web</span></a></li>
+                    <li class="nav__item"><a href="do-hoa-media.html" class="nav__link active"><i
+                                class="fas fa-image"></i><span>Đồ họa</span></a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm"><i class="fas fa-arrow-left"></i> Quay
+                        lại</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Đồ họa & Media</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fas fa-image"></i> Đồ Họa & Đa Phương Tiện</h1>
+
+            <p>Khám phá thế giới sáng tạo số với các công cụ thiết kế đồ họa, chỉnh sửa ảnh và dựng phim.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-star"></i> Kỹ năng cần thiết</h4>
+                <p>Trong kỷ nguyên số, kỹ năng thiết kế và truyền thông đa phương tiện là lợi thế lớn cho mọi ngành
+                    nghề.</p>
+            </div>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-paint-brush" style="color: #31A8FF"></i> Photoshop</h3>
+                    <p>Chỉnh sửa ảnh chuyên nghiệp, cắt ghép, blend màu và thiết kế banner.</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-vector-square" style="color: #FF9A00"></i> Illustrator</h3>
+                    <p>Thiết kế đồ họa vector: logo, icon, minh họa và ấn phẩm in ấn.</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-video" style="color: #9999FF"></i> Premiere Pro</h3>
+                    <p>Dựng phim, cắt ghép video, thêm hiệu ứng và âm thanh.</p>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-pen-nib" style="color: #00C4CC"></i> Canva</h3>
+                    <p>Công cụ thiết kế nhanh chóng, tiện lợi cho social media và thuyết trình.</p>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-paint-brush"></i> Photoshop Cơ Bản</h2>
+
+            <h3>Giao diện và Công cụ</h3>
+            <ul>
+                <li><strong>Layer:</strong> Quản lý các lớp hình ảnh</li>
+                <li><strong>Selection Tools:</strong> Vùng chọn (Marquee, Lasso, Magic Wand)</li>
+                <li><strong>Brush:</strong> Công cụ vẽ và tô màu</li>
+                <li><strong>Transform:</strong> Thay đổi kích thước và góc xoay</li>
+            </ul>
+
+            <h3>Kỹ thuật chỉnh sửa</h3>
+            <ul>
+                <li><strong>Adjustment Layers:</strong> Chỉnh sáng tối, màu sắc không phá hủy ảnh gốc</li>
+                <li><strong>Masking:</strong> Che/hiện các phần của layer</li>
+                <li><strong>Retouching:</strong> Xóa mụn, vật thể thừa (Healing Brush, Clone Stamp)</li>
+            </ul>
+
+            <h2><i class="fas fa-vector-square"></i> Tư Duy Thiết Kế</h2>
+            <ul>
+                <li><strong>Bố cục (Layout):</strong> Sắp xếp các yếu tố hài hòa</li>
+                <li><strong>Màu sắc (Color Theory):</strong> Phối màu bổ túc, tương đồng</li>
+                <li><strong>Typography:</strong> Sử dụng font chữ hợp lý</li>
+            </ul>
+
+        </article>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        const header = document.getElementById('header');
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header--scrolled', window.pageYOffset > 80);
+            backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>

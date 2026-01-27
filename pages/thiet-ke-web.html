@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thiết kế Web - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Thiết kế Web - Tin Học Đường</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, #E44D26 0%, #F7DF1E 50%, #264DE4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: #E44D26;
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .code-block {
+            background: #1e293b;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #e2e8f0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(228, 77, 38, 0.1) 0%, rgba(247, 223, 30, 0.1) 100%);
+            border-left: 4px solid #E44D26;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: #E44D26;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #E44D26;
+        }
+
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="logo-text"><span class="logo-title">Tin Học Đường</span><span class="logo-subtitle">THPT
+                            Lý Tự Trọng</span></div>
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="../index.html" class="nav__link"><i
+                                class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                    <li class="nav__item"><a href="thiet-ke-web.html" class="nav__link active"><i
+                                class="fas fa-palette"></i><span>Thiết kế Web</span></a></li>
+                    <li class="nav__item"><a href="python.html" class="nav__link"><i
+                                class="fab fa-python"></i><span>Python</span></a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm"><i class="fas fa-arrow-left"></i> Quay
+                        lại</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Thiết kế Web</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fas fa-palette"></i> Thiết Kế Web</h1>
+
+            <p>Học cách xây dựng website từ con số 0 với HTML, CSS và JavaScript - ba công nghệ nền tảng của web.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-lightbulb"></i> Bộ ba công nghệ web</h4>
+                <ul style="margin:0; padding-left: 1.5rem;">
+                    <li><strong style="color:#E44D26">HTML</strong> - Cấu trúc nội dung</li>
+                    <li><strong style="color:#264DE4">CSS</strong> - Định dạng giao diện</li>
+                    <li><strong style="color:#F7DF1E">JavaScript</strong> - Xử lý tương tác</li>
+                </ul>
+            </div>
+
+            <h2><i class="fab fa-html5" style="color:#E44D26"></i> HTML - Hypertext Markup Language</h2>
+
+            <p>HTML là ngôn ngữ đánh dấu để tạo cấu trúc cho trang web.</p>
+
+            <h3>Cấu trúc cơ bản</h3>
+            <div class="code-block">
+                <code><span style="color:#e06c75">&lt;!DOCTYPE html&gt;</span>
+<span style="color:#e06c75">&lt;html</span> <span style="color:#d19a66">lang</span>=<span style="color:#98c379">"vi"</span><span style="color:#e06c75">&gt;</span>
+<span style="color:#e06c75">&lt;head&gt;</span>
+    <span style="color:#e06c75">&lt;meta</span> <span style="color:#d19a66">charset</span>=<span style="color:#98c379">"UTF-8"</span><span style="color:#e06c75">&gt;</span>
+    <span style="color:#e06c75">&lt;title&gt;</span>Trang web đầu tiên<span style="color:#e06c75">&lt;/title&gt;</span>
+<span style="color:#e06c75">&lt;/head&gt;</span>
+<span style="color:#e06c75">&lt;body&gt;</span>
+    <span style="color:#e06c75">&lt;h1&gt;</span>Xin chào!<span style="color:#e06c75">&lt;/h1&gt;</span>
+    <span style="color:#e06c75">&lt;p&gt;</span>Đây là trang web đầu tiên.<span style="color:#e06c75">&lt;/p&gt;</span>
+<span style="color:#e06c75">&lt;/body&gt;</span>
+<span style="color:#e06c75">&lt;/html&gt;</span></code>
+            </div>
+
+            <h2><i class="fab fa-css3-alt" style="color:#264DE4"></i> CSS - Cascading Style Sheets</h2>
+
+            <p>CSS giúp trang web trở nên đẹp mắt với màu sắc, font chữ, layout...</p>
+
+            <div class="code-block">
+                <code><span style="color:#5c6370">/* Định dạng cơ bản */</span>
+<span style="color:#e06c75">body</span> {
+    <span style="color:#d19a66">font-family</span>: <span style="color:#98c379">'Arial'</span>, sans-serif;
+    <span style="color:#d19a66">background-color</span>: <span style="color:#98c379">#f0f0f0</span>;
+    <span style="color:#d19a66">margin</span>: <span style="color:#d19a66">0</span>;
+    <span style="color:#d19a66">padding</span>: <span style="color:#d19a66">20px</span>;
+}
+
+<span style="color:#e06c75">h1</span> {
+    <span style="color:#d19a66">color</span>: <span style="color:#98c379">#333</span>;
+    <span style="color:#d19a66">text-align</span>: center;
+}
+
+<span style="color:#e06c75">.button</span> {
+    <span style="color:#d19a66">background</span>: <span style="color:#98c379">#007bff</span>;
+    <span style="color:#d19a66">color</span>: white;
+    <span style="color:#d19a66">padding</span>: <span style="color:#d19a66">10px 20px</span>;
+    <span style="color:#d19a66">border-radius</span>: <span style="color:#d19a66">5px</span>;
+}</code>
+            </div>
+
+            <h2><i class="fab fa-js" style="color:#F7DF1E"></i> JavaScript</h2>
+
+            <p>JavaScript giúp trang web tương tác với người dùng.</p>
+
+            <div class="code-block">
+                <code><span style="color:#5c6370">// Hiển thị thông báo</span>
+<span style="color:#61afef">alert</span>(<span style="color:#98c379">"Chào mừng đến Tin Học Đường!"</span>);
+
+<span style="color:#5c6370">// Xử lý sự kiện click</span>
+<span style="color:#c678dd">document</span>.<span style="color:#61afef">getElementById</span>(<span style="color:#98c379">"myBtn"</span>).<span style="color:#61afef">addEventListener</span>(<span style="color:#98c379">"click"</span>, <span style="color:#c678dd">function</span>() {
+    <span style="color:#61afef">alert</span>(<span style="color:#98c379">"Bạn đã click!"</span>);
+});
+
+<span style="color:#5c6370">// Thay đổi nội dung</span>
+<span style="color:#c678dd">document</span>.<span style="color:#61afef">getElementById</span>(<span style="color:#98c379">"demo"</span>).<span style="color:#d19a66">innerHTML</span> = <span style="color:#98c379">"Nội dung mới"</span>;</code>
+            </div>
+
+            <h2><i class="fas fa-tasks"></i> Bài Tập Thực Hành</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fab fa-html5" style="color:#E44D26"></i> HTML</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Tạo trang giới thiệu bản thân</li>
+                        <li>Tạo form đăng ký</li>
+                        <li>Tạo bảng thời khóa biểu</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fab fa-css3-alt" style="color:#264DE4"></i> CSS</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Tạo layout 2-3 cột</li>
+                        <li>Thiết kế navigation bar</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fab fa-js" style="color:#F7DF1E"></i> JavaScript</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Máy tính đơn giản</li>
+                        <li>To-do list</li>
+                        <li>Image slider</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        const header = document.getElementById('header');
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header--scrolled', window.pageYOffset > 80);
+            backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>

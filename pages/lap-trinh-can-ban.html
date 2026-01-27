@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lập trình căn bản - Tin Học Đường THPT Lý Tự Trọng">
+    <title>Lập trình căn bản - Tin Học Đường</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Nội dung bài viết */
+        .article-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            color: var(--primary);
+            border-bottom: 2px solid var(--bg-hover);
+            padding-bottom: var(--space-sm);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-xl);
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .code-block {
+            background: #1e293b;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #e2e8f0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .topic-card {
+            background: var(--bg-hover);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .topic-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .topic-card i {
+            color: var(--primary);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Single column layout for content pages */
+        .content-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: calc(var(--header-height) + var(--space-xl));
+            padding-bottom: var(--space-3xl);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="nav__logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">Tin Học Đường</span>
+                        <span class="logo-subtitle">THPT Lý Tự Trọng</span>
+                    </div>
+                </a>
+
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">
+                            <i class="fas fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="lap-trinh-can-ban.html" class="nav__link active">
+                            <i class="fas fa-code"></i>
+                            <span>Lập trình</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="thuat-toan.html" class="nav__link">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Thuật toán</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="python.html" class="nav__link">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav__actions">
+                    <a href="../index.html" class="btn btn--outline btn--sm">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container content-layout">
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Lập trình căn bản</span>
+        </nav>
+
+        <article class="article-content">
+            <h1><i class="fas fa-code"></i> Lập Trình Căn Bản</h1>
+
+            <p>Chào mừng bạn đến với khóa học Lập trình căn bản! Đây là nền tảng cho mọi ngôn ngữ lập trình, từ Pascal,
+                C++ đến Python. Nội dung được tổng hợp từ VNOI Wiki.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-lightbulb"></i> Lời khuyên</h4>
+                <p style="margin:0">Hãy thực hành code mỗi ngày. Đọc lý thuyết không đủ - bạn cần viết code, debug, và
+                    giải quyết vấn đề thực tế.</p>
+            </div>
+
+            <!-- Chủ đề chính -->
+            <h2><i class="fas fa-folder-open"></i> Các Chủ Đề Chính</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-sort-amount-up"></i> Thuật Toán Sắp Xếp</h3>
+                    <p>Bubble Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort và ứng dụng.</p>
+                    <a href="#sorting" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-search"></i> Tìm Kiếm</h3>
+                    <p>Tìm kiếm tuyến tính, tìm kiếm nhị phân và các biến thể.</p>
+                    <a href="#searching" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-database"></i> Mảng & Chuỗi</h3>
+                    <p>Xử lý mảng một chiều, hai chiều, chuỗi ký tự.</p>
+                    <a href="#arrays" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-redo"></i> Đệ Quy</h3>
+                    <p>Khái niệm đệ quy, các bài toán đệ quy cơ bản và nâng cao.</p>
+                    <a href="#recursion" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <!-- Thuật toán sắp xếp -->
+            <h2 id="sorting"><i class="fas fa-sort"></i> Thuật Toán Sắp Xếp</h2>
+
+            <p>Ứng dụng về sắp xếp có ở khắp mọi nơi:</p>
+            <ul>
+                <li>Một danh sách lớp với các học sinh được sắp xếp theo thứ tự bảng chữ cái.</li>
+                <li>Một danh bạ điện thoại.</li>
+                <li>Danh sách các truy vấn được tìm kiếm nhiều nhất trên Google.</li>
+            </ul>
+
+            <p>Thuật toán sắp xếp cũng được dùng kết hợp với những thuật toán khác, như tìm kiếm nhị phân, thuật toán
+                Kruskal để tìm cây khung nhỏ nhất của đồ thị.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-question-circle"></i> Vì sao phải học nhiều thuật toán sắp xếp?</h4>
+                <p style="margin:0">Khi code, bạn chỉ cần biết cài một thuật toán sắp xếp là đủ. Hoặc nếu bạn code C++
+                    hay Java, bạn chỉ cần biết cách gọi thư viện. Tuy nhiên, các thuật toán sắp xếp khác nhau cho ta
+                    nhiều ý tưởng hay và độc đáo - điều này vô cùng hữu ích khi các bạn học các thuật toán khác.</p>
+            </div>
+
+            <h3>Những điểm cần chú ý</h3>
+            <p>Khi so sánh giữa các thuật toán này với nhau, có nhiều vấn đề phải quan tâm:</p>
+            <ol>
+                <li><strong>Thời gian chạy:</strong> Đối với các dữ liệu rất lớn, các thuật toán không hiệu quả sẽ chạy
+                    rất chậm.</li>
+                <li><strong>Bộ nhớ:</strong> Các thuật toán nhanh đòi hỏi đệ quy sẽ có thể phải tạo ra các bản copy của
+                    dữ liệu.</li>
+                <li><strong>Độ ổn định (stability):</strong> Các phần tử có giá trị bằng nhau có giữ nguyên thứ tự
+                    không?</li>
+            </ol>
+
+            <!-- Bubble Sort -->
+            <h3>1. Sắp xếp nổi bọt (Bubble Sort)</h3>
+            <p>Đây là thuật toán cơ bản nhất cho việc sắp xếp.</p>
+
+            <p><strong>Ý tưởng:</strong></p>
+            <ul>
+                <li>Xét lần lượt các cặp 2 phần tử liên tiếp. Nếu phần tử đứng sau nhỏ hơn phần tử đứng trước, ta đổi
+                    chỗ 2 phần tử.</li>
+                <li>Lặp lại đến khi không còn 2 phần tử nào thỏa mãn.</li>
+            </ul>
+
+            <p><strong>Ưu điểm:</strong> Code đơn giản, dễ hiểu. Không tốn thêm bộ nhớ.</p>
+            <p><strong>Nhược điểm:</strong> Độ phức tạp O(N²), không đủ nhanh với dữ liệu lớn.</p>
+
+            <div class="code-block">
+                <code><span style="color:#c678dd">for</span> (<span style="color:#c678dd">int</span> i = <span style="color:#d19a66">0</span>; i &lt; n; i++) {
+    <span style="color:#c678dd">for</span> (<span style="color:#c678dd">int</span> j = <span style="color:#d19a66">0</span>; j &lt; n - <span style="color:#d19a66">1</span>; j++) {
+        <span style="color:#c678dd">if</span> (a[j] &gt; a[j+<span style="color:#d19a66">1</span>]) {
+            <span style="color:#61afef">swap</span>(a[j], a[j+<span style="color:#d19a66">1</span>]);
+        }
+    }
+}</code>
+            </div>
+
+            <!-- Quick Sort -->
+            <h3>2. Sắp xếp nhanh (Quick Sort)</h3>
+            <p>Một trong những thuật toán sắp xếp hiệu quả nhất trong thực tế.</p>
+
+            <p><strong>Ý tưởng:</strong></p>
+            <ul>
+                <li>Chọn một phần tử làm chốt (pivot).</li>
+                <li>Phân hoạch mảng thành 2 phần: nhỏ hơn pivot và lớn hơn pivot.</li>
+                <li>Gọi đệ quy cho 2 phần mảng.</li>
+            </ul>
+
+            <p><strong>Độ phức tạp:</strong> Trung bình O(N log N), xấu nhất O(N²).</p>
+
+            <div class="code-block">
+                <code><span style="color:#c678dd">void</span> <span style="color:#61afef">quickSort</span>(<span style="color:#c678dd">int</span> a[], <span style="color:#c678dd">int</span> left, <span style="color:#c678dd">int</span> right) {
+    <span style="color:#c678dd">if</span> (left &gt;= right) <span style="color:#c678dd">return</span>;
+    
+    <span style="color:#c678dd">int</span> pivot = a[(left + right) / <span style="color:#d19a66">2</span>];
+    <span style="color:#c678dd">int</span> i = left, j = right;
+    
+    <span style="color:#c678dd">while</span> (i &lt;= j) {
+        <span style="color:#c678dd">while</span> (a[i] &lt; pivot) i++;
+        <span style="color:#c678dd">while</span> (a[j] &gt; pivot) j--;
+        <span style="color:#c678dd">if</span> (i &lt;= j) {
+            <span style="color:#61afef">swap</span>(a[i], a[j]);
+            i++; j--;
+        }
+    }
+    
+    <span style="color:#61afef">quickSort</span>(a, left, j);
+    <span style="color:#61afef">quickSort</span>(a, i, right);
+}</code>
+            </div>
+
+            <!-- Tìm kiếm nhị phân -->
+            <h2 id="searching"><i class="fas fa-search"></i> Tìm Kiếm Nhị Phân</h2>
+
+            <p>Tìm kiếm nhị phân là thuật toán tìm kiếm hiệu quả trên mảng đã được sắp xếp.</p>
+
+            <p><strong>Ý tưởng:</strong></p>
+            <ul>
+                <li>So sánh phần tử cần tìm với phần tử giữa mảng.</li>
+                <li>Nếu bằng → tìm thấy.</li>
+                <li>Nếu nhỏ hơn → tìm ở nửa trái.</li>
+                <li>Nếu lớn hơn → tìm ở nửa phải.</li>
+            </ul>
+
+            <p><strong>Độ phức tạp:</strong> O(log N)</p>
+
+            <div class="code-block">
+                <code><span style="color:#c678dd">int</span> <span style="color:#61afef">binarySearch</span>(<span style="color:#c678dd">int</span> a[], <span style="color:#c678dd">int</span> n, <span style="color:#c678dd">int</span> x) {
+    <span style="color:#c678dd">int</span> left = <span style="color:#d19a66">0</span>, right = n - <span style="color:#d19a66">1</span>;
+    
+    <span style="color:#c678dd">while</span> (left &lt;= right) {
+        <span style="color:#c678dd">int</span> mid = (left + right) / <span style="color:#d19a66">2</span>;
+        
+        <span style="color:#c678dd">if</span> (a[mid] == x) <span style="color:#c678dd">return</span> mid;
+        <span style="color:#c678dd">if</span> (a[mid] &lt; x) left = mid + <span style="color:#d19a66">1</span>;
+        <span style="color:#c678dd">else</span> right = mid - <span style="color:#d19a66">1</span>;
+    }
+    
+    <span style="color:#c678dd">return</span> -<span style="color:#d19a66">1</span>; <span style="color:#5c6370">// Không tìm thấy</span>
+}</code>
+            </div>
+
+            <!-- Bài tập thực hành -->
+            <h2><i class="fas fa-tasks"></i> Bài Tập Thực Hành</h2>
+
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--success)"></i> Dễ</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Sắp xếp mảng tăng dần</li>
+                        <li>Tìm phần tử lớn nhất</li>
+                        <li>Đếm số lần xuất hiện</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--accent)"></i> Trung bình</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Tìm cặp số có tổng = K</li>
+                        <li>Merge 2 mảng đã sắp xếp</li>
+                        <li>Tìm phần tử xuất hiện nhiều nhất</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <h3><i class="fas fa-star" style="color: var(--danger)"></i> Khó</h3>
+                    <ul style="margin:0; padding-left: 1.5rem;">
+                        <li>Quick Sort không đệ quy</li>
+                        <li>Counting Sort</li>
+                        <li>Radix Sort</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: var(--space-2xl)">
+                <h4><i class="fas fa-external-link-alt"></i> Nguồn tham khảo</h4>
+                <p style="margin:0">Nội dung được tổng hợp từ <a href="https://wiki.vnoi.info/" target="_blank">VNOI
+                        Wiki</a> - Tài liệu thuật toán tiếng Việt chất lượng cao.</p>
+            </div>
+        </article>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Sticky header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 80) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+
+        // Back to top
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
